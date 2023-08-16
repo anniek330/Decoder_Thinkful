@@ -33,7 +33,7 @@ const caesarModule = (function () {
         finalNum = (indexNum - shift + 26) % 26;
       }
       if (finalNum < 0) {
-        finalNum += 26; // Handle negative finalNum 
+        finalNum += 26; // Handle negative finalNum
       }
       //associate final number with position of letter in lookup[#]
       const finalLetter = alphaLookup[finalNum];
@@ -41,7 +41,7 @@ const caesarModule = (function () {
     }
     return result;
   }
-console.log(caesar("wbyox jxdxwfkb",-3,false))
+  console.log(caesar("wbyox jxdxwfkb", -3, false));
   return {
     caesar,
   };
