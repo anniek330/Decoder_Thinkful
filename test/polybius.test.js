@@ -28,7 +28,7 @@ describe("polybius ()", () => {
     });
     describe("ignores capital letters: result of Message and message are the same", () => {
       it("ignores capital letters: result of Message)", () => {
-        const input = "message";
+        const input = "Message";
         const actual = polybius(input);
         const expected = "23513434112251";
 

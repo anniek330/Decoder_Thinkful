@@ -11,7 +11,14 @@ function uniqueCharacters(alphabetString) {
 }
 
 const substitutionModule = (function () {
-  // you can add any code you want within this function scope
+  
+  function uniqueCharacters(alphabetString) {
+    // any two characters the same-return false
+    for (let i = 0; i < alphabetString.length; i++)
+      for (let j = i + 1; j < alphabetString.length; j++)
+        if (alphabetString[i] == alphabetString[j]) return true;
+  };
+
   let alphaLookup = "abcdefghijklmnopqrstuvwxyz";
   function substitution(input = "", alphabet = "", encode = true) {
     //alphabet must be 26 characters long and each character must be unique

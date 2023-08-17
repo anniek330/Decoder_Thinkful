@@ -4,7 +4,6 @@
 // of the anonymous function on line 6
 
 const caesarModule = (function () {
-  // you can add any code you want within this function scope
   let alphaLookup = "abcdefghijklmnopqrstuvwxyz";
   function caesar(input, shift, encode = true) {
     //if statement to deal with shift contingencies

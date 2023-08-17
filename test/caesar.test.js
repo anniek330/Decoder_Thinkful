@@ -1,5 +1,5 @@
 const { expect } = require("chai");
-const {caesar} = require("../src/caesar");
+const { caesar } = require("../src/caesar");
 
 describe("caesar()", () => {
   describe("dealing with errors", () => {
@@ -24,7 +24,7 @@ describe("caesar()", () => {
 
       expect(actual).to.be.false;
     });
-    it(" returns false is the shift value is not present", () => {
+    it(" returns false if the shift value is not present", () => {
       const input = "testing value";
       const actual = caesar(input);
 
@@ -32,14 +32,14 @@ describe("caesar()", () => {
     });
   });
   describe("Dealing with capital letters: Message and message should have the same result", () => {
-    it("It ignores capital letters: result from (Message)", () => {
+    it("It ignores capital letters: result from: Message", () => {
       const input = "Message";
       const shift = 3;
       const actual = caesar(input, shift);
       const expected = "phvvdjh";
       expect(actual).to.equal(expected);
     });
-    it("result from (message)", () => {
+    it("result from: message", () => {
       const input = "message";
       const shift = 3;
       const actual = caesar(input, shift);
@@ -48,7 +48,7 @@ describe("caesar()", () => {
     });
   });
   describe("Handles shifts that go past the end of the alphabet when encoding.", () => {
-    it("it wraps around the alphabet when a positive shift  goes past letter z", () => {
+    it("it wraps around the alphabet when a positive shift goes past letter z", () => {
       const input = "zebra magazine";
       const shift = 3;
       const actual = caesar(input, shift);
@@ -72,7 +72,7 @@ describe("caesar()", () => {
         const expected = "d phvvdjh";
         expect(actual).to.equal(expected);
       });
-      it(" it maintains other nonalphabetic symbols in the message", () => {
+      it("it maintains other nonalphabetic symbols in the message", () => {
         const input = "message!";
         const shift = 3;
         const actual = caesar(input, shift);
@@ -88,7 +88,7 @@ describe("caesar()", () => {
         const expected = "a message";
         expect(actual).to.equal(expected);
       });
-      it(" it maintains other nonalphabetic symbols in the message", () => {
+      it("it maintains other nonalphabetic symbols in the message", () => {
         const input = "phvvdjh!";
         const shift = 3;
         const actual = caesar(input, shift, false);
